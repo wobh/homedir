@@ -1,0 +1,23 @@
+#+title: README
+#+date: <2022-03-24 Thu>
+#+author: William Clifford
+#+email: will@wobh.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.2 (Org mode 9.4.6)
+#+startup: overview
+
+* Purpose
+
+Manage *nix HOME configuration.
+
+Uses rsync to transfer user configurations to and from a
+change-managed respository.
+
+* COMMENT org settings
+#+options: ':nil *:t -:t ::t <:t H:6 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
