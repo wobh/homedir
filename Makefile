@@ -1,12 +1,5 @@
 # -*- mode: make; -*-
 
-# POSIX
-# install :
-#	install --target-directory="$$HOME/.local/bin"\
-#		--mode=0700\
-#		local/bin/homedir_backup.sh\
-#		local/bin/homedir_restore.sh
-
 ifneq (${XDG_CONFIG_HOME},)
 	config_home = ${XDG_CONFIG_HOME}/homedir
 else

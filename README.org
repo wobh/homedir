@@ -37,9 +37,9 @@ To use:
 1. Clone repository
 2. Run ~make install~ to install script as ~${HOME}/.local/bin/homedir~
 3. Setup backup exclusions in ~${XDG_CONFIG_HOME/homedir/excluded_configs}~
-   - test exclustions by running ~homedir backup~
+   - test exclusions by running ~homedir backup~
 4. Run ~homedir backup --for-real~
-5. Run ~homedir visit~ (~cd ${XDG_DATA_HOME}/homedir~)
+5. ~cd ${XDG_DATA_HOME}/homedir~
 6. Manage changes in your SCM.
 
 * References
