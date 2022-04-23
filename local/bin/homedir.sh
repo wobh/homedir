@@ -4,9 +4,6 @@
 # strict mode
 set -euo pipefail
 
-# stricter mode
-set -rC
-
 usage="Usage: ${0} <command> [<option>]
 
 Commands
@@ -29,21 +26,21 @@ backup_home="${XDG_DATA_HOME:-$HOME/.local/share}/homedir/config"
 
 case $cmd in
     "backup")
-	sync_src="${config_home}/"
-	sync_dest="${backup_home}"
-	;;
+        sync_src="${config_home}/"
+        sync_dest="${backup_home}"
+        ;;
     "restore")
-	sync_src="${backup_home}/"
-	sync_dest="${config_home}"
-	;;
+        sync_src="${backup_home}/"
+        sync_dest="${config_home}"
+        ;;
     "help")
-	echo "${usage}"
-	exit 0
-	;;
+        echo "${usage}"
+        exit 0
+        ;;
     *)
-	echo "${usage}"
-	exit 1
-	;;
+        echo "${usage}"
+        exit 1
+        ;;
 esac
 
 declare -a sync_opts
@@ -70,4 +67,3 @@ rsync ${sync_opts[@]}\
       --\
       ${sync_src}\
       ${sync_dest}
-
