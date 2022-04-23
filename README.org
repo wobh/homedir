@@ -8,12 +8,49 @@
 #+creator: Emacs 27.2 (Org mode 9.4.6)
 #+startup: overview
 
-* Purpose
+* Introduction
 
-Manage *nix HOME configuration.
+Manage *nix ~${HOME}~ configuration.
 
 Uses rsync to transfer user configurations to and from a
 change-managed respository.
+
+Currently just backs up ~${XDG_CONFIG_HOME}~ but more might be added in
+the future.
+
+* Purpose
+
+This is here shared with the idea that some might find it useful for
+personal experiments and toys--that's all I'm using it for. It might
+also be cautionarily if not pedagogically useful. All that said, it
+should not be expected to have any desireable characteristics or be
+useful in any way.
+
+Non-personal use (for example, commercial) is forbidden.
+
+Non-casual personal use is strongly discouraged.
+
+* Instructions
+
+To use:
+
+1. Clone repository
+2. Run ~make install~ to install script as ~${HOME}/.local/bin/homedir~
+3. Setup backup exclusions in ~${XDG_CONFIG_HOME/homedir/excluded_configs}~
+   - test exclustions by running ~homedir backup~
+4. Run ~homedir backup --for-real~
+5. Run ~homedir visit~ (~cd ${XDG_DATA_HOME}/homedir~)
+6. Manage changes in your SCM.
+
+* References
+
+XDG Base Directory spec:
+
+- https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
+XDG Base Directory support:
+
+- https://wiki.archlinux.org/title/XDG_Base_Directory
 
 * COMMENT org settings
 #+options: ':nil *:t -:t ::t <:t H:6 \n:nil ^:t arch:headline
