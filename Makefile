@@ -25,8 +25,11 @@ default :
 install :
 	install -m 0700\
 		local/bin/homedir.sh\
-		${HOME}/.local/bin/
+		${HOME}/.local/bin/homedir
 	install -m 0700\
 		-d ${config_home}
 	install -m 0700\
 		-d ${backup_home}
+
+uninstall :
+	rm ${HOME}/.local/bin/homedir
